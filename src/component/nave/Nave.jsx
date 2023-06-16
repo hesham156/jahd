@@ -5,7 +5,7 @@ import data from '../../data/data.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { MDBCol } from "mdbreact";
-
+import {  toast } from 'react-toastify';
 const Nave = () => {
     document.title=data.site.siteName;
   return (
@@ -19,6 +19,9 @@ const Nave = () => {
              <div className={style.search + ' w-50'}>
              <MDBCol md="12">
                   <input className="form-control" type="text" placeholder="ابحث" aria-label="ابحث" />
+                  <button onClick={()=>{
+                     toast.success('hhhh',{theme: "dark" })
+                  }} type='submit'>بحث</button>
              </MDBCol>
              </div>
              <div className={style.lnks + ' w-25'}>

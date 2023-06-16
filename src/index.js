@@ -5,7 +5,8 @@ import './style/public.css'
 import './style/normalize.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {BrowserRouter as Router} from 'react-router-dom'
 
 
@@ -13,6 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
+      <ToastContainer/>
        <App />
     </Router>
   </React.StrictMode>
