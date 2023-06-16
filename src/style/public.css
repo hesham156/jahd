@@ -1,0 +1,10 @@
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: unset !important;
+}
+@font-face {
+    font-family:thisfont36462;
+    src: url(https://alfont.com//wp-content/fonts/thulth-arabic-fonts//alfont_com_Dimabanou.ttf);
+  }
