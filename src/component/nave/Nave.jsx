@@ -17,7 +17,7 @@ const Nave = () => {
                 {data.site.siteLogo?<img className={style.logoImg} src={data.site.siteLogo} alt={data.site.siteName}/>:<h1 className={style.logoName}>{data.site.siteName}</h1>}
              </div>
              <div className={style.search + ' w-50'}>
-             <MDBCol md="12">
+             <MDBCol md="12" className={style.searchBar}>
                   <input className="form-control" type="text" placeholder="ابحث" aria-label="ابحث" />
                   <button onClick={()=>{
                      toast.success('hhhh',{theme: "dark" })

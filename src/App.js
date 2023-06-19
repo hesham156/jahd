@@ -11,7 +11,7 @@ function App() {
     <Route path="/login" element={<Login/>}/>
     <Route path="/register" element={<Register/>}/>
     <Route path="/not" element={<Error/>} />
-    <Route path="*" element={<Error/>}/>
+    <Route path="*" element={<Error errorCode={404} errorMsg={"This Page not foumd"}/>}/>
    </Routes>
   );
 }

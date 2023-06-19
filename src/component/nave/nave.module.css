@@ -40,3 +40,13 @@
     -moz-text-fill-color: transparent;
     margin: 0;
 }
+.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: unset;
+}
+.searchBar input{
+    border-left: 0;
+    border-color:var(--primary-color);
+    border-radius: 0px 10px 10px 0px;
+}
