@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './style/normalize.css'
+import './asset/css/normalize.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './style/public.css'
+import './asset/css/public.css'
 
 import {BrowserRouter as Router} from 'react-router-dom'
 

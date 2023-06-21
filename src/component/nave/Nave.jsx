@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from './nave.module.css'
 import { Link } from 'react-router-dom'
 import data from '../../data/data.json'
@@ -6,21 +6,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { MDBCol } from "mdbreact";
 import {  toast } from 'react-toastify';
+import Swal from 'sweetalert2'
+
 const Nave = () => {
     document.title=data.site.siteName;
+   
+
+   
   return (
     
     <div className={style.nave}>
          <div className='container'>
             <div className='d-flex flex-row'>
-             <div className={style.logo + ' w-25'}>
+             <div className={style.logo + ' logo w-25'}>
                 {data.site.siteLogo?<img className={style.logoImg} src={data.site.siteLogo} alt={data.site.siteName}/>:<h1 className={style.logoName}>{data.site.siteName}</h1>}
              </div>
              <div className={style.search + ' w-50'}>
              <MDBCol md="12" className={style.searchBar}>
                   <input className="form-control" type="text" placeholder="ابحث" aria-label="ابحث" />
                   <button onClick={()=>{
-                     toast.success('hhhh',{theme: "dark" })
+                  toast.success("runn",{theme: "dark",})
                   }} type='submit'>بحث</button>
              </MDBCol>
              </div>

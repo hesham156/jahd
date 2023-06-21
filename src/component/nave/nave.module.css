@@ -50,3 +50,7 @@
     border-color:var(--primary-color);
     border-radius: 0px 10px 10px 0px;
 }
+.nave button{
+    border-radius: 10px 0 0 10px;
+
+}
