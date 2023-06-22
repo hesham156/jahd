@@ -1,5 +1,8 @@
 .login{
     height: 100vh;
+    background-image: url('../../img/wall.jpg');
+    background-size: cover;
+    background-position: center;
 }
 .login form button{
     width: 88%;
