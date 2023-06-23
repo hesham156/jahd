@@ -3,12 +3,13 @@ import style from '../asset/css/login/login.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons'
 const Login = () => {
-  const trans =(value)=>{
+  const lang ='ar'
+  const trans =(value ,lang)=>{
 
       return value
   }
   return (
-    <div className={style.login + ' d-flex justify-content-center align-items-center'}>
+    <div dir={lang==='en'?'ltr':'rtl'} className={style.login + ' d-flex justify-content-center align-items-center'}>
       <div className="container">
         <div  className='forUser d-flex flex-column justify-content-center align-items-center '>
            <div class="logo w-100 text-center">
