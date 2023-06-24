@@ -2,6 +2,7 @@ import React from 'react'
 import style from '../asset/css/login/login.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons'
+import GoogleBtn from '../component/nave/button/GoogleBtn'
 const Login = () => {
   const trans =(value)=>{
 
@@ -12,7 +13,7 @@ const Login = () => {
     <div className='overlay'></div>
       <div className="container z-3">
         <div  className='forUser d-flex flex-column justify-content-center align-items-center '>
-           <div class="logo w-100 text-center">
+           <div className="logo w-100 text-center">
               <h1>جَاهِد</h1> 
             </div>
            <form  action="" className='d-flex justify-content-center align-items-center flex-column'>
@@ -20,13 +21,13 @@ const Login = () => {
                <input type="password" name="password" placeholder={trans('كلمه السر')} id="" />
                <button type='submit'>{trans('دخول')}</button>
            </form>
-           <pr/> {trans('او استخدم')}
+            {trans('او استخدم')}
            <div className="socialLogin d-flex justify-content-center align-items-center">
                 <div className='googleLogin'>
-                  <button>
-                  <FontAwesomeIcon icon={faGoogle} />
-
-                  </button>
+                  {/* <button> */}
+                  {/* <FontAwesomeIcon icon={faGoogle} /> */}
+                       <GoogleBtn value={""}/>
+                  {/* </button> */}
                 </div>
                 <div className='facebokLogin'>
                   <button>
