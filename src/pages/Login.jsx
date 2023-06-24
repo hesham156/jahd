@@ -9,7 +9,8 @@ const Login = () => {
   }
   return (
     <div className={style.login + ' d-flex justify-content-center align-items-center'}>
-      <div className="container">
+    <div className='overlay'></div>
+      <div className="container z-3">
         <div  className='forUser d-flex flex-column justify-content-center align-items-center '>
            <div class="logo w-100 text-center">
               <h1>جَاهِد</h1> 
