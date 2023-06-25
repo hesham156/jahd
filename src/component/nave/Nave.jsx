@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import style from './nave.module.css'
 import { Link } from 'react-router-dom'
 import data from '../../data/data.json'
@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { MDBCol } from "mdbreact";
 import {  toast } from 'react-toastify';
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 
 const Nave = () => {
     document.title=data.site.siteName;

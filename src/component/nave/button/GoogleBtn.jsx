@@ -1,8 +1,11 @@
 import React from 'react'
 import { GoogleLogin } from 'react-google-login';
 import { gapi } from "gapi-script";
+import { toast } from 'react-toastify';
 
 const responseGoogle = (response) => {
+  toast.success(response.profileObj?.email+"fjj")
+
   console.log(response);
 };
 const GoogleBtn = ({value}) => {
@@ -21,6 +24,10 @@ const GoogleBtn = ({value}) => {
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
           cookiePolicy={'single_host_origin'}
+          style={{background:'red !important'}}
+          icon={false}
+
+          
         />
         </>
       );
