@@ -1,18 +1,16 @@
 import React, { useState } from 'react'
 import FacebookLogin from 'react-facebook-login'
-const FacebookBtn = ({icon}) => {
+import sendData from '../../data/sendData';
+const FacebookBtn = ({icon,login}) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userData, setUserData] = useState  ({});
     function responseFacebook(response) {
-        console.log(response);
-        setIsLoggedIn(true);
-        setUserData(response);
-        // Send response to server for server-side verification and user authentication
+        login(sendData(response));
       }
   return (
       <>
          <FacebookLogin
-            appId="your-app-id"
+            appId="913562719798311"
             autoLoad={false}
             fields="name,email,picture"
             callback={responseFacebook}

@@ -2,14 +2,17 @@ import React from 'react'
 import style from '../asset/css/login/login.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons'
-import GoogleBtn from '../component/nave/button/GoogleBtn'
-import FacebookBtn from '../component/nave/button/FacebookBtn'
+import GoogleBtn from '../component/button/GoogleBtn'
+import FacebookBtn from '../component/button/FacebookBtn'
+import { useState } from 'react'
 const Login = () => {
+  const [login,setLogin] = useState(false)
   const lang = 'ar'
   const trans =(value)=>{
-
       return value
   }
+    console.log(login)
+
   return (
     <div dir={lang==='ar'?'rtl':'ltr'} className={style.login + ' d-flex justify-content-center align-items-center'}>
     <div className='overlay'></div>
@@ -28,13 +31,13 @@ const Login = () => {
                 <div className='googleLogin'>
                   {/* <button> */}
                   {/* <FontAwesomeIcon icon={faGoogle} /> */}
-                       <GoogleBtn value={ <FontAwesomeIcon icon={faGoogle} />}/>
+                       <GoogleBtn login={setLogin} value={ <FontAwesomeIcon icon={faGoogle} />}/>
                   {/* </button> */}
                 </div>
                 <div className='facebokLogin'>
                   {/* <button> */}
                   {/* <FontAwesomeIcon icon={faFacebook} /> */}
-                     <FacebookBtn icon={<FontAwesomeIcon icon={faFacebook} /> }/>
+                     <FacebookBtn login={setLogin} icon={<FontAwesomeIcon icon={faFacebook} /> }/>
                   {/* </button> */}
                 </div>
            </div>

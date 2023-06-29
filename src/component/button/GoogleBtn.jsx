@@ -2,13 +2,11 @@ import React from 'react'
 import { GoogleLogin } from 'react-google-login';
 import { gapi } from "gapi-script";
 import { toast } from 'react-toastify';
+import sendData from '../../data/sendData';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
-const responseGoogle = (response) => {
-  toast.success(response.profileObj?.email+"fjj")
-
-  console.log(response);
-};
-const GoogleBtn = ({value}) => {
+const GoogleBtn = ({value,login}) => {
     gapi.load("client:auth2", () => {
         gapi.client.init({
           clientId:
@@ -16,6 +14,11 @@ const GoogleBtn = ({value}) => {
           plugin_name: "chat",
         });
       });
+      function responseGoogle(response) {
+       
+        login(sendData(response))
+      };
+    
     return (
         <>
         <GoogleLogin
