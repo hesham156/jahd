@@ -1,11 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import FacebookLogin from 'react-facebook-login'
 import sendData from '../../data/sendData';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 const FacebookBtn = ({icon,login}) => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userData, setUserData] = useState  ({});
     function responseFacebook(response) {
-        login(sendData(response));
+        axios
+        .get(`http://localhost:3004/users?email=${response.email}`)
+        .then((res)=>{
+            console.log(res);
+            res.data.length===0?toast.success('login')&&sendData(response):toast.error('user')
+        })
+        .catch((err)=>{console.log(err);})
+      
       }
   return (
       <>

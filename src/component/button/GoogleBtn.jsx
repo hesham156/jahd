@@ -5,8 +5,9 @@ import { toast } from 'react-toastify';
 import sendData from '../../data/sendData';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import axios from 'axios';
 
-const GoogleBtn = ({value,login}) => {
+const GoogleBtn = ({value,login,empty}) => {
     gapi.load("client:auth2", () => {
         gapi.client.init({
           clientId:
@@ -15,8 +16,15 @@ const GoogleBtn = ({value,login}) => {
         });
       });
       function responseGoogle(response) {
-       
-        login(sendData(response))
+        axios
+        .get(`http://localhost:3004/users?email=${response.profileObj.email}`)
+        .then((res)=>{
+            console.log(res);
+            res.data.length===0?toast.success('login')&&sendData(response):toast.error('user')
+        })
+        .catch((err)=>{console.log(err);})
+      
+
       };
     
     return (

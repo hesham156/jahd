@@ -5,14 +5,14 @@ import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons'
 import GoogleBtn from '../component/button/GoogleBtn'
 import FacebookBtn from '../component/button/FacebookBtn'
 import { useState } from 'react'
+import useGet from '../hook/useGet'
+import { toast } from 'react-toastify'
 const Login = () => {
-  const [login,setLogin] = useState(false)
   const lang = 'ar'
   const trans =(value)=>{
       return value
   }
-    console.log(login)
-
+  const [login,setLogin] = useState({})
   return (
     <div dir={lang==='ar'?'rtl':'ltr'} className={style.login + ' d-flex justify-content-center align-items-center'}>
     <div className='overlay'></div>
@@ -29,16 +29,10 @@ const Login = () => {
             {trans('او استخدم')}
            <div className="socialLogin d-flex justify-content-center align-items-center">
                 <div className='googleLogin'>
-                  {/* <button> */}
-                  {/* <FontAwesomeIcon icon={faGoogle} /> */}
-                       <GoogleBtn login={setLogin} value={ <FontAwesomeIcon icon={faGoogle} />}/>
-                  {/* </button> */}
+                       <GoogleBtn login={setLogin}  value={ <FontAwesomeIcon icon={faGoogle} />}/>
                 </div>
                 <div className='facebokLogin'>
-                  {/* <button> */}
-                  {/* <FontAwesomeIcon icon={faFacebook} /> */}
-                     <FacebookBtn login={setLogin} icon={<FontAwesomeIcon icon={faFacebook} /> }/>
-                  {/* </button> */}
+                     <FacebookBtn login={setLogin}  icon={<FontAwesomeIcon icon={faFacebook} /> }/>
                 </div>
            </div>
            <hr/>
