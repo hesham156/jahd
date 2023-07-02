@@ -6,9 +6,13 @@ const GridSection = () => {
  console.log(data)
   return (
     <section>
+      <div className="container d-flex justify-content-center align-items-center gap-2 flex-wrap">
+        
     {data?.map((course)=>{
       return <Card key={course.id} course={course}/>
     })}
+    
+    </div>
   </section>
   )
 }

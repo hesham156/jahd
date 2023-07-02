@@ -7,10 +7,10 @@ import {Error,Home,Register,Login,Course} from './pages/AllPage'
 function App() {
   return (
    <Routes>
-    <Route exact path="/" element={<Home/>}/>
+    <Route exact path="/*" element={<Home/>}/>
     <Route path="/login" element={<Login/>}/>
     <Route path="/register" element={<Register/>}/>
-    <Route path="/course/:courseid" element={<Course/>}/>
+    {/* <Route path="/course/:courseid" element={<Course/>}/> */}
     <Route path="/not" element={<Error/>} />
     <Route path="*" element={<Error errorCode={404} errorMsg={"This Page not foumd"}/>}/>
    </Routes>

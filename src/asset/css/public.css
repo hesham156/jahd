@@ -81,3 +81,11 @@ div.forUser form input {
     border-radius: 4px;
 
 }
+.videoplayer{
+    height: auto;
+    min-height: 470px;
+    max-height: 480px;
+}
+div#this_playlist_instance_name {
+    width: 100%;
+}
