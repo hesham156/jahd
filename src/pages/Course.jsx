@@ -27,32 +27,32 @@ const Course = () => {
     // })
   // console.log(id)
 useEffect(()=>{
-     axios
-  .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=188&resultsPerPage=100&key=AIzaSyDJY3B-IFsVTtgeUC1MZVqCnsvbATqfSPc`)
+  const fetchData = async () => { await axios
+  .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=50&nextPageToken=EAAaBlBUOkNHUQ&key=AIzaSyAA5l1Q4Nqmki9oT9srTJbL-ZxFC0jYgy4`)
   .then((res)=>{
       setnext(res.data.nextPageToken?res.data.nextPageToken:res.data.prevPageToken)
       setVideoPlayer(res.data.items[0].snippet.resourceId.videoId)
       setVideos(res.data.items)
-      console.log(videos,videoPlayer);
+      console.log(res);
   })
   .catch((err)=>{
       console.log(err);
-  })
-  console.log(videos,videoPlayer);
-
+  })}
+fetchData()
 },[])
-   
-    // const more = ()=>{
-    //     axios
-    //     .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=188&pageToken=${nexpage}&key=AIzaSyDJY3B-IFsVTtgeUC1MZVqCnsvbATqfSPc`)
-    //     .then((res)=>{
-    //         console.log(res.data)
-    //         setnext(res.data.nextPageToken?res.data.nextPageToken:res.data.prevPageToken)
-    //     })
-    //     .catch((err)=>{
-    //         console.log(err);
-    //     })
-    // }
+console.log(videos,videoPlayer);
+
+    const more = ()=>{
+        axios
+        .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=188&pageToken=${nexpage}&key=AIzaSyAA5l1Q4Nqmki9oT9srTJbL-ZxFC0jYgy4`)
+        .then((res)=>{
+            console.log(res.data)
+            setnext(res.data.nextPageToken?res.data.nextPageToken:res.data.prevPageToken)
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    }
   return (
     <div className=''>
       <div className='container '>
@@ -75,9 +75,9 @@ useEffect(()=>{
         uniqueName="THIS_PLAYLIST_INSTANCE_NAME"
         
       />
-            {/* <button onClick={()=>{more()}}>more</button>
+            <button onClick={()=>{more()}}>more</button>
 
-    </div> */}
+    {/* </div> */}
     </div>
     </div>
     </div>
