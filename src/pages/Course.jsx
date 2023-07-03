@@ -9,23 +9,8 @@ const Course = () => {
     const params = useParams('courseid')
     const [nexpage,setnext] = useState('')
     const [videoPlayer,setVideoPlayer] = useState('')
-    const [videos,setVideos] = useState('')
-    // useEffect(() => {
-    //   const fetchData = async () => {
-    //     try {
-    //       const response = await axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=188&key=AIzaSyDJY3B-IFsVTtgeUC1MZVqCnsvbATqfSPc`);
-    //       console.log(response.data);
-    //     } catch (error) {
-    //       console.error(error);
-    //     }
-    //   };
+    const [videos,setVideos] = useState([])
   
-    //   fetchData();
-    // }, []);
-    // getPlaylistData("AIzaSyDJY3B-IFsVTtgeUC1MZVqCnsvbATqfSPc",params?.courseid).then((n)=>{
-    //   console.log(n)
-    // })
-  // console.log(id)
 useEffect(()=>{
   const fetchData = async () => { await axios
   .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=50&nextPageToken=EAAaBlBUOkNHUQ&key=AIzaSyAA5l1Q4Nqmki9oT9srTJbL-ZxFC0jYgy4`)
@@ -57,27 +42,27 @@ console.log(videos,videoPlayer);
     <div className=''>
       <div className='container '>
         <div className='d-flex justify-content-center flex-row-reverse w-100'>
-    {/* <div className='videoPlayer w-75 m-2'>
+    <div className='videoPlayer w-75 m-2'>
       <iframe className="w-100 videoplayer fslightboxs fslightbox-opacity-1" src={"https://www.youtube.com/embed/FYRypqj4Epw?v="+videoPlayer} frameBorder="0" allowFullScreen="" ></iframe>
      
     </div>
-    <div className='platList w-25 m-2'> */}
-      {/* {videos?.map((vid)=>{
+    <div className='platList w-25 m-2'>
+      {videos?.map((vid)=>{
           return(
-            <>
-               <Card course={vid} key={vid.id}/>
-            </>
+            <div className='vidCard' key={vid?.id}>
+               <h5>{vid.snippet.title}</h5>
+            </div >
           )
-      })} */}
-    <YouTubePlaylist
+      })}
+    {/* <YouTubePlaylist
         apiKey="AIzaSyAA5l1Q4Nqmki9oT9srTJbL-ZxFC0jYgy4"
         playlistId={params?.courseid}
         uniqueName="THIS_PLAYLIST_INSTANCE_NAME"
         
-      />
+      /> */}
             <button onClick={()=>{more()}}>more</button>
 
-    {/* </div> */}
+    </div>
     </div>
     </div>
     </div>
@@ -85,3 +70,38 @@ console.log(videos,videoPlayer);
 }
 
 export default Course
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // useEffect(() => {
+    //   const fetchData = async () => {
+    //     try {
+    //       const response = await axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=188&key=AIzaSyDJY3B-IFsVTtgeUC1MZVqCnsvbATqfSPc`);
+    //       console.log(response.data);
+    //     } catch (error) {
+    //       console.error(error);
+    //     }
+    //   };
+  
+    //   fetchData();
+    // }, []);
+    // getPlaylistData("AIzaSyDJY3B-IFsVTtgeUC1MZVqCnsvbATqfSPc",params?.courseid).then((n)=>{
+    //   console.log(n)
+    // })
+  // console.log(id)
