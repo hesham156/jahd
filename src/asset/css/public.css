@@ -89,3 +89,16 @@ div.forUser form input {
 div#this_playlist_instance_name {
     width: 100%;
 }
+.vidCard {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 5px;
+}
+.platList.w-25.m-2 {
+    height: 500px;
+    overflow-y: scroll;
+}
+.active.vidCard {
+    border: 1px solid red;
+}

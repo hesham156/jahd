@@ -33,7 +33,7 @@
     },
     {
       "id":2,
-      "name": "js ",
+      "name": "html ",
       "img": "https://i.ytimg.com/vi/6QAELgirvjs/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCf_Az0D0kKIqg10xDDEkVYCXuFaQ",
       "instructor_id":1,
       "date":"2021-01-01",
@@ -41,6 +41,21 @@
       "location":"Bangalore",
       "description":"This is a description of the course",
       "c_id":"PLDoPjvoNmBAw_t_XWUFbBX-c9MafPk9ji",
+      "students":["user"],
+      "rating":{},
+      "comments":[],
+      "status":"active"
+    },
+    {
+      "id":3,
+      "name": "css ",
+      "img": "https://i.ytimg.com/vi/X1ulCwyhCVM/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDkC-vNrtKaa-y2FSGQ9oGsv4XKdg",
+      "instructor_id":1,
+      "date":"2021-01-01",
+      "time":"12:00",
+      "location":"Bangalore",
+      "description":"This is a description of the course",
+      "c_id":"PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe",
       "students":["user"],
       "rating":{},
       "comments":[],
@@ -55,6 +70,22 @@
       "img":"https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=212337517835700&height=50&width=50&ext=1690818534&hash=AeRfNh08DYuBEJmHjPU"
 
       
+
+    }
+  ],
+  "roadsMap":[
+    {
+      "id":1,
+      "roadmap":"frontend",
+      "courses":[1,2,3],
+      "img":"https://i.ytimg.com/vi/6QAELgirvjs/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCf_Az0D0kKIqg10xDDEkVYCXuFaQ"
+
+    },
+    {
+      "id":2,
+      "roadmap":"backend",
+      "courses":[4,5,6],
+      "img":"https://i.ytimg.com/vi/6QAELgirvjs/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCf_Az0D0kKIqg10xDDEkVYCXuFaQ"
 
     }
   ]

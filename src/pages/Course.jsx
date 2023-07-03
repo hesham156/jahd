@@ -10,6 +10,8 @@ const Course = () => {
     const [nexpage,setnext] = useState('')
     const [videoPlayer,setVideoPlayer] = useState('')
     const [videos,setVideos] = useState([])
+    const [vid,setvid] = useState(1)
+
   
 useEffect(()=>{
   const fetchData = async () => { await axios
@@ -18,15 +20,21 @@ useEffect(()=>{
       setnext(res.data.nextPageToken?res.data.nextPageToken:res.data.prevPageToken)
       setVideoPlayer(res.data.items[0].snippet.resourceId.videoId)
       setVideos(res.data.items)
-      console.log(res);
   })
   .catch((err)=>{
       console.log(err);
   })}
 fetchData()
 },[])
-console.log(videos,videoPlayer);
+const next= ()=>{
+   setvid(1+vid);
+  setVideoPlayer(videos[vid].snippet.resourceId.videoId)
+}
+const prev= ()=>{
+  setvid(vid===1?0:vid-1);
+  setVideoPlayer(videos[vid].snippet.resourceId.videoId)
 
+}
     const more = ()=>{
         axios
         .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=188&pageToken=${nexpage}&key=AIzaSyAA5l1Q4Nqmki9oT9srTJbL-ZxFC0jYgy4`)
@@ -43,16 +51,25 @@ console.log(videos,videoPlayer);
       <div className='container '>
         <div className='d-flex justify-content-center flex-row-reverse w-100'>
     <div className='videoPlayer w-75 m-2'>
-      <iframe className="w-100 videoplayer fslightboxs fslightbox-opacity-1" src={"https://www.youtube.com/embed/FYRypqj4Epw?v="+videoPlayer} frameBorder="0" allowFullScreen="" ></iframe>
-     
+      <iframe className="w-100 videoplayer fslightboxs fslightbox-opacity-1" src={"https://www.youtube.com/embed/"+videoPlayer} frameBorder="0" allowFullScreen="" ></iframe>
+     <button onClick={()=>{next()}}>Next</button>
+     <button onClick={()=>{prev()}}>prev</button>
+
     </div>
     <div className='platList w-25 m-2'>
       {videos?.map((vid)=>{
           return(
-            <div className='vidCard' key={vid?.id}>
-               <h5>{vid.snippet.title}</h5>
+            <div className={(vid.snippet.resourceId.videoId===videoPlayer?"active":'' )+ ' vidCard'} key={vid?.id}>
+               <div>
+              <p>{vid.snippet.title}</p>
+
+              </div>
+               <div>
+               <img src={vid.snippet.thumbnails.default.url}/>
+               </div>
             </div >
           )
+        
       })}
     {/* <YouTubePlaylist
         apiKey="AIzaSyAA5l1Q4Nqmki9oT9srTJbL-ZxFC0jYgy4"
