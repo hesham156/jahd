@@ -10,41 +10,47 @@ const Course = () => {
     const [nexpage,setnext] = useState('')
     const [videoPlayer,setVideoPlayer] = useState('')
     const [videos,setVideos] = useState([])
-    const [vid,setvid] = useState(1)
+    var [vId,setvId] = useState(0)
 
-  
+    const fetchData = async () => { await axios
+      .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=50&pageToken=${nexpage?nexpage:''}&key=AIzaSyAA5l1Q4Nqmki9oT9srTJbL-ZxFC0jYgy4`)
+      .then((res)=>{
+          setnext(res.data.nextPageToken?res.data.nextPageToken:res.data.prevPageToken)
+          setVideoPlayer(res.data.items[0].snippet.resourceId.videoId);
+          res.data.items.length!==0&&videos.length!==res.data.pageInfo.totalResults?setVideos(videos.concat(res.data.items)):setVideos(videos)
+          // setVideos(res.data.items.length!==0&&videos.length!==res.data.pageInfo.totalResults?videos.concat(res.data.items):res.data.items,videos)
+          console.log(videos.length,res.data.pageInfo.totalResults)
+      })
+      .catch((err)=>{
+          return err;
+      })}
 useEffect(()=>{
-  const fetchData = async () => { await axios
-  .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=50&nextPageToken=EAAaBlBUOkNHUQ&key=AIzaSyAA5l1Q4Nqmki9oT9srTJbL-ZxFC0jYgy4`)
-  .then((res)=>{
-      setnext(res.data.nextPageToken?res.data.nextPageToken:res.data.prevPageToken)
-      setVideoPlayer(res.data.items[0].snippet.resourceId.videoId)
-      setVideos(res.data.items)
-  })
-  .catch((err)=>{
-      console.log(err);
-  })}
+  
 fetchData()
-},[])
-const next= ()=>{
-   setvid(1+vid);
-  setVideoPlayer(videos[vid].snippet.resourceId.videoId)
-}
-const prev= ()=>{
-  setvid(vid===1?0:vid-1);
-  setVideoPlayer(videos[vid].snippet.resourceId.videoId)
 
-}
-    const more = ()=>{
-        axios
-        .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=188&pageToken=${nexpage}&key=AIzaSyAA5l1Q4Nqmki9oT9srTJbL-ZxFC0jYgy4`)
-        .then((res)=>{
-            console.log(res.data)
-            setnext(res.data.nextPageToken?res.data.nextPageToken:res.data.prevPageToken)
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
+},[])
+console.log(vId)
+// const next= (id)=>{
+//   setvId(id+1);
+//   setVideoPlayer(videos[id].snippet.resourceId.videoId)
+// }
+// const prev= (id)=>{
+//   setvId(id-1);
+//   setVideoPlayer(videos[id].snippet.resourceId.videoId)
+
+// }
+    // const more = ()=>{
+    //     axios
+    //     .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=188&pageToken=${nexpage}&key=AIzaSyAA5l1Q4Nqmki9oT9srTJbL-ZxFC0jYgy4`)
+    //     .then((res)=>{
+    //         setnext(res.data.nextPageToken?res.data.nextPageToken:res.data.prevPageToken)
+    //     })
+    //     .catch((err)=>{
+    //         return err;
+    //     })
+    // }
+    const select = (id)=>{
+
     }
   return (
     <div className=''>
@@ -52,14 +58,15 @@ const prev= ()=>{
         <div className='d-flex justify-content-center flex-row-reverse w-100'>
     <div className='videoPlayer w-75 m-2'>
       <iframe className="w-100 videoplayer fslightboxs fslightbox-opacity-1" src={"https://www.youtube.com/embed/"+videoPlayer} frameBorder="0" allowFullScreen="" ></iframe>
-     <button onClick={()=>{next()}}>Next</button>
-     <button onClick={()=>{prev()}}>prev</button>
+     <button >Next</button>
+     <button >prev</button>
 
     </div>
     <div className='platList w-25 m-2'>
-      {videos?.map((vid)=>{
+      {videos?.map((vid,index)=>{
+           
           return(
-            <div className={(vid.snippet.resourceId.videoId===videoPlayer?"active":'' )+ ' vidCard'} key={vid?.id}>
+            <div onClick={()=>{setVideoPlayer(vid.snippet.resourceId.videoId)}} className={(vid.snippet.resourceId.videoId===videoPlayer?"active":'' )+ ' vidCard'} key={vid?.id}>
                <div>
               <p>{vid.snippet.title}</p>
 
@@ -77,7 +84,7 @@ const prev= ()=>{
         uniqueName="THIS_PLAYLIST_INSTANCE_NAME"
         
       /> */}
-            <button onClick={()=>{more()}}>more</button>
+            <button onClick={()=>{fetchData()}}>more</button>
 
     </div>
     </div>
