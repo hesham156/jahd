@@ -17,8 +17,9 @@
     ],
   "courses":[
     {
-      "id": 1,
+      "id": 3,
       "name": "js ",
+      "type":"front",
       "img": "https://i.ytimg.com/vi/GM6dQBmc-Xg/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC7bmiWM5DxiYEk-iTeXzBPdnWbZg",
       "instructor_id":1,
       "date":"2021-01-01",
@@ -32,8 +33,9 @@
       "status":"active"
     },
     {
-      "id":2,
+      "id":1,
       "name": "html ",
+      "type":"front",
       "img": "https://i.ytimg.com/vi/6QAELgirvjs/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCf_Az0D0kKIqg10xDDEkVYCXuFaQ",
       "instructor_id":1,
       "date":"2021-01-01",
@@ -47,8 +49,25 @@
       "status":"active"
     },
     {
-      "id":3,
+      "id":2,
       "name": "css ",
+      "type":"front",
+      "img": "https://i.ytimg.com/vi/X1ulCwyhCVM/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDkC-vNrtKaa-y2FSGQ9oGsv4XKdg",
+      "instructor_id":1,
+      "date":"2021-01-01",
+      "time":"12:00",
+      "location":"Bangalore",
+      "description":"This is a description of the course",
+      "c_id":"PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe",
+      "students":["user"],
+      "rating":{},
+      "comments":[],
+      "status":"active"
+    },
+    {
+      "id":3,
+      "name": "React ",
+      "type":"back",
       "img": "https://i.ytimg.com/vi/X1ulCwyhCVM/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDkC-vNrtKaa-y2FSGQ9oGsv4XKdg",
       "instructor_id":1,
       "date":"2021-01-01",
@@ -76,16 +95,16 @@
   "roadsMap":[
     {
       "id":1,
-      "roadmap":"frontend",
+      "roadmap":"front",
       "courses":[1,2,3],
-      "img":"https://i.ytimg.com/vi/6QAELgirvjs/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCf_Az0D0kKIqg10xDDEkVYCXuFaQ"
+      "img":"https://i.ytimg.com/vi/s_dtZw4ndKc/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAQInJfjaOtDAgUHe7HzHMCiFBWjg"
 
     },
     {
       "id":2,
-      "roadmap":"backend",
+      "roadmap":"back",
       "courses":[4,5,6],
-      "img":"https://i.ytimg.com/vi/6QAELgirvjs/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCf_Az0D0kKIqg10xDDEkVYCXuFaQ"
+      "img":"https://i.ytimg.com/vi/V3ZPPPKEipA/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLB6luQN6lmiM5m92rRUlVeAGYxi8w"
 
     }
   ]

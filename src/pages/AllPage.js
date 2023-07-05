@@ -3,4 +3,6 @@ import Home from "./Home";
 import Login from "./Login";
 import Register from "./Register";
 import Course from "./Course";
-export {Error,Home,Login,Register,Course};
+import RoadMaps from "./RoadMaps";
+
+export {RoadMaps,Error,Home,Login,Register,Course};

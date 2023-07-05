@@ -2,7 +2,7 @@ import React from 'react'
 import Nave from '../component/nave/Nave'
 import GridSection from '../component/sections/GridSection'
 import { Link, Route, Routes } from 'react-router-dom'
-import Course from './Course'
+import {RoadMaps,Course} from './AllPage'
 
 const Home = () => {
   return (
@@ -11,7 +11,8 @@ const Home = () => {
      
     <Routes>
     <Route path="/course/:courseid" element={<Course/>}/>
-    <Route path="/" element={<GridSection/>}/>
+    <Route path="/road/:roadtype" element={<RoadMaps/>}/>
+    <Route path="/" element={<GridSection src={'http://localhost:3004/roadsMap'}/>}/>
 
     </Routes>
       </>  
