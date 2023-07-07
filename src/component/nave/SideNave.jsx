@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import style from './sidenave.module.css'
 const SideNave = ({active}) => {
+    const data = [{id:1,text:"home",url:"/#"},{id:2,text:"road maps",url:'/road/'},{id:3,text:"courses",url:'/courses/'},{id:4,text:"login",url:'/login/'}]
     const sidenave = {
     position: "absolute",
     width: active?"100%":"0%",
@@ -29,8 +30,15 @@ const SideNave = ({active}) => {
         <div className='layer' style={layer}></div>
            <div className="container position-relative z-1">
                 <div className='d-flex justify-content-center align-items-center vh-100'>
-                    <ul>
-                        <li><Link style={{color:"#fff"}}>side</Link></li>
+                    <ul className={style.lol}>
+                        {data?.map((el)=>{
+                            return(
+                                <li key={el.id}>
+                                   <Link to={el.url} style={{color:"#fff"}}>{el.text}</Link>
+                                </li>
+                            )
+                        })}
+                        {/* <Link style={{color:"#fff"}}>side</Link> */}
                     </ul>
                 </div>
            </div>

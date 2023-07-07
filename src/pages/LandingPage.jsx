@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 
 const LandingPage = () => {
     const [active,setActive] = useState(false)
+
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -48,7 +49,7 @@ const LandingPage = () => {
   return (
     <div>
         <button style={serch}>O</button>
-        <SideNave active={active}/>
+        <SideNave  active={active}/>
       <Nave sideMenu={setActive}/>
       <Carousel  arrows={false} responsive={responsive} infinite={true} autoPlay={true}> 
      <div>
