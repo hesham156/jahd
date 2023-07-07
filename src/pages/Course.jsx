@@ -11,7 +11,6 @@ const Course = () => {
     const [videoPlayer,setVideoPlayer] = useState('')
     const [videos,setVideos] = useState([])
     var [vId,setvId] = useState(0)
-
     const fetchData = async () => { await axios
       .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${params.courseid}&maxResults=50&pageToken=${nexpage?nexpage:''}&key=AIzaSyAA5l1Q4Nqmki9oT9srTJbL-ZxFC0jYgy4`)
       .then((res)=>{
@@ -49,6 +48,12 @@ console.log(vId)
     //         return err;
     //     })
     // }
+    const scrollend = (e)=>{
+          const bottom = Math.floor(e.target.scrollHeight - e.target.scrollTop) === e.target.clientHeight;
+        if(bottom){
+            fetchData()
+        }
+    }
     const select = (id)=>{
 
     }
@@ -62,7 +67,7 @@ console.log(vId)
      <button >prev</button>
 
     </div>
-    <div className='platList w-25 m-2'>
+    <div onScroll={(e)=>{scrollend(e)}} className='platList w-25 m-2'>
       {videos?.map((vid,index)=>{
            
           return(

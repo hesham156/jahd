@@ -4,12 +4,29 @@
 *{
     transition: all 0.3s ease-in-out;
 }
+body{
+    background: black;
+}
+body::-webkit-scrollbar {
+    width: 2px;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    outline: 1px solid slategrey;
+    border-radius: 10px;
+  }
 ul{
     list-style: none;
 }
 a{
     text-decoration: unset !important;
 }
+
 @font-face {
     font-family:thisfont36462;
     src: url(https://alfont.com//wp-content/fonts/thulth-arabic-fonts//alfont_com_Dimabanou.ttf);
@@ -69,6 +86,13 @@ div.forUser form input {
     background-size: cover;
     opacity: 0.3; */
 }
+.overlay2{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #00000066, #0000009e);
+    position: absolute;
+    z-index: 1;
+}
 .googleLogin button {
     background: var(--primary-color) !important;
     color: white !important;
@@ -104,6 +128,10 @@ div#this_playlist_instance_name {
 }
 .MuiOutlinedInput-notchedOutline{
     border:0 solid #202020 !important;
+}
+.react-multi-carousel-list{
+    background: black;
+
 }
 @media(max-width:990px) {
     .d-flex.justify-content-center.flex-row-reverse.w-100 {

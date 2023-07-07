@@ -1,8 +1,12 @@
 .nave{
-    height: 80px;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    width: 15%;
     align-items: center;
+    position: absolute;
+    z-index: 111111;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
     direction: rtl;
 }
 .nave > div >div> div {
@@ -53,4 +57,9 @@
 .nave button{
     border-radius: 10px 0 0 10px;
 
+}
+@media(max-width:991px) {
+    .nave{
+    width: 33%;
+    }
 }

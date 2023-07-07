@@ -4,5 +4,5 @@ import Login from "./Login";
 import Register from "./Register";
 import Course from "./Course";
 import RoadMaps from "./RoadMaps";
-
-export {RoadMaps,Error,Home,Login,Register,Course};
+import LandingPage from "./LandingPage";
+export {RoadMaps,Error,Home,Login,Register,Course,LandingPage};
