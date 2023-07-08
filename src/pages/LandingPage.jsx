@@ -29,20 +29,7 @@ const LandingPage = () => {
           items: 1
         }
       };
-    // const serch = {
-    //         top: "55px",
-    //         position: "absolute",
-    //         right: "15px",
-    //         background: "white",
-    //         zIndex: 111111111111111,
-    //         color: "black",
-    //         cursor: "pointer",
-    //         width: "40px",
-    //         height: "40px",
-    //         borderRadius: "50%",
-    //         textAlign: "center",
-    //         lineHeight: 0,
-    //     }
+    
       
   return (
     <div>
