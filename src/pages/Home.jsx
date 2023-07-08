@@ -17,7 +17,8 @@ const Home = () => {
     <Route path="/course/:courseid" element={<Course/>}/>
     <Route path="/road/:roadtype" element={<RoadMaps/>}/>
     <Route path="/road/" element={<GridSection src={'http://localhost:3004/roadsMap'}/>}/>
-    <Route path="/courses/" element={<GridSection src={'http://localhost:3004/courses'}/>}/>
+    <Route path="/course/" element={<GridSection src={'http://localhost:3004/courses'}/>}/>
+    <Route path="/books/" element={<GridSection src={'http://localhost:3004/books'}/>}/>
 
     <Route path="/" element={<LandingPage/>}/>
     </Routes>

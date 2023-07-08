@@ -133,6 +133,106 @@ div#this_playlist_instance_name {
     background: black;
 
 }
+.socialNave {
+    position: fixed;
+    z-index: 1111111;
+    transition: all 0.1s;
+    right: -70px;
+    display: flex;
+    top: 50%;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+
+}
+.socialNave ul{
+    width: 100%;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+.socialNave ul li a{
+    color: white;
+    font-size: 50px;
+}
+.socialNave ul li{
+transition: all 0.3s;
+position: relative;
+right: -100px;
+}
+.socialNave ul > li:nth-child(1){
+    transition-delay: 0s;
+}
+.socialNave ul > li:nth-child(2){
+    transition-delay: 0.1s;
+
+}
+.socialNave ul > li:nth-child(3){
+    transition-delay: 0.2s;
+
+}
+.socialNave ul > li:nth-child(4){
+    transition-delay: 0.3s;
+
+}
+.socialNave ul > li:nth-child(5){
+    transition-delay: 0.4s;
+
+}
+.socialNave ul > li:nth-child(6){
+    transition-delay: 0.5s;
+
+}
+.socialNave{
+    transition-delay: 0.6s;
+
+}
+.sactive{
+    transition-delay: 0s;
+
+    right: 0;
+
+}
+.sactive.socialNave ul li{
+    right: 0;
+}
+.topIcons button{
+    transition: all 0.3s;
+    top: 55px;
+    position: absolute;
+    right: 15px;
+    background: white;
+    z-index: 111111111111111;
+    color: black;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 0;
+}
+.topIcons button:nth-child(1){
+    transition-delay: 0.1s;
+}
+.topIcons button:nth-child(2){
+    transition-delay: 0.2s;
+}
+.isActive button:nth-child(1){
+    right: 75px;
+    top: 35px;
+}
+.isActive button:nth-child(2){
+    right: 75px;
+    top: 90px;
+}
+
+
 @media(max-width:990px) {
     .d-flex.justify-content-center.flex-row-reverse.w-100 {
         flex-direction: column !important;

@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Nave from '../component/nave/Nave';
 import Carousel from 'react-multi-carousel';
 import video1 from '../asset/video/1.mp4'
 import GridSection from '../component/sections/GridSection';
-import SideNave from '../component/nave/SideNave';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 
 const LandingPage = () => {
     const [active,setActive] = useState(false)
-
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -29,28 +29,31 @@ const LandingPage = () => {
           items: 1
         }
       };
-    const serch = {
-            top: "55px",
-            position: "absolute",
-            right: "15px",
-            background: "white",
-            zIndex: 111111111111111,
-            color: "black",
-            cursor: "pointer",
-            width: "40px",
-            height: "40px",
-            borderRadius: "50%",
-            textAlign: "center",
-            lineHeight: 0,
-        }
-        useEffect(()=>{
-            console.log(active)
-        },[active])
+    // const serch = {
+    //         top: "55px",
+    //         position: "absolute",
+    //         right: "15px",
+    //         background: "white",
+    //         zIndex: 111111111111111,
+    //         color: "black",
+    //         cursor: "pointer",
+    //         width: "40px",
+    //         height: "40px",
+    //         borderRadius: "50%",
+    //         textAlign: "center",
+    //         lineHeight: 0,
+    //     }
+      
   return (
     <div>
-        <button style={serch}>O</button>
-        <SideNave  active={active}/>
-      <Nave sideMenu={setActive}/>
+      <div className={(active?'isActive':'')+' topIcons'}>
+        <button ><FontAwesomeIcon icon={faUser} /></button>
+        <button ><FontAwesomeIcon icon={faSearch} /></button>
+        <button onClick={()=>{setActive(active?false:true)}} >{active?'-':'+'}</button>
+        </div>
+
+
+      <Nave/>
       <Carousel  arrows={false} responsive={responsive} infinite={true} autoPlay={true}> 
      <div>
      <div className='overlay2'></div>
