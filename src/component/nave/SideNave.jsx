@@ -4,7 +4,7 @@ import style from './sidenave.module.css'
 const SideNave = ({active}) => {
     const data = [{id:1,text:"home",url:"/#"},{id:2,text:"road maps",url:'/road/'},{id:3,text:"courses",url:'/courses/'},{id:4,text:"login",url:'/login/'}]
     const sidenave = {
-    position: "absolute",
+    position: "fixed",
     width: active?"100%":"0%",
     height: "100vh",
     zIndex: 1,

@@ -58,8 +58,26 @@
     border-radius: 10px 0 0 10px;
 
 }
+.logoImg{
+    width: 75% !important;
+}
 @media(max-width:991px) {
     .nave{
-    width: 33%;
+        width: 100%;
+        position: fixed;
+        height: 121px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background: #000000b8;
+        bottom: 0;
+        }
+    .nave > div>div{
+        flex-direction: row !important;
+    }
+    .nave > div>div>div{
+        height: auto !important;
+        width: 25%;
+    }
+    .logoImg{
+        width: 45% !important;
     }
 }
