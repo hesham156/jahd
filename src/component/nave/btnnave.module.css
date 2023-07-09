@@ -1,0 +1,30 @@
+.search{}
+.searchOverlay{
+    position: absolute;
+    width: 100%;
+    background: #37472980;
+    height: 100vh;
+    z-index: -11;
+    opacity: 0;
+    filter: blur(73px);
+transition: all 0.3s;
+}
+
+.search  input{
+    position: absolute;
+    z-index: -11;
+    transform: translate(50%,50%);
+    right: 50%;
+    top: 50%;
+    transition: all 0.3s;
+    opacity: 0;
+}
+.activeSearch > div{
+    z-index: 111111;
+    opacity: 1;
+}
+.activeSearch input{
+    opacity: 1;
+    z-index: 1111111111111;
+
+}

@@ -3,16 +3,12 @@ import Nave from '../component/nave/Nave';
 import Carousel from 'react-multi-carousel';
 import video1 from '../asset/video/1.mp4'
 import GridSection from '../component/sections/GridSection';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-regular-svg-icons';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 
 
 const LandingPage = () => {
-    const [active,setActive] = useState(false)
     const responsive = {
         superLargeDesktop: {
-          // the naming can be any, depends on you.
           breakpoint: { max: 4000, min: 3000 },
           items: 1
         },
@@ -33,11 +29,7 @@ const LandingPage = () => {
       
   return (
     <div>
-      <div className={(active?'isActive':'')+' topIcons'}>
-        <button ><FontAwesomeIcon icon={faUser} /></button>
-        <button ><FontAwesomeIcon icon={faSearch} /></button>
-        <button onClick={()=>{setActive(active?false:true)}} >{active?'-':'+'}</button>
-        </div>
+     
 
 
       <Nave/>

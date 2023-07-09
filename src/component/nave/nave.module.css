@@ -61,6 +61,15 @@
 .logoImg{
     width: 75% !important;
 }
+.follow h4{
+    transition: all 0.3s;
+}
+.follow h4:hover{
+    color:#a0f963 !important;
+}
+.menu >div>div:hover>div{
+    background-color: #a0f963 !important;
+}
 @media(max-width:991px) {
     .nave{
         width: 100%;

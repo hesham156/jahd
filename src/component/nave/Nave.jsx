@@ -6,6 +6,7 @@ import Hamburger from 'hamburger-react'
 import logo from '../../asset/img/logo.png'
 import SideNave from './SideNave'
 import Social from './Social'
+import BtnNave from './BtnNave'
 const Nave = () => {
     document.title=data.site.siteName;
    const [active,setActive]= useState(false)
@@ -13,6 +14,7 @@ const Nave = () => {
 
    return (
     <>
+    <BtnNave/>
     <SideNave active={active}/>
     <Social active={sActive}/>
     <div className={style.nave}>
@@ -27,16 +29,8 @@ const Nave = () => {
                </div>
              </div>
              <div className={style.follow + ' logo h-25'}>
-               <h4 onClick={()=>{setSActive(sActive?false:true)}} style={{transform:"rotate(-90deg)",color: "white",fontSize: "15px"}}>Follow US</h4>
+               <h4 onClick={()=>{setSActive(sActive?false:true)}} style={{transform:sActive?"rotate(-90deg)":"rotate(0deg)",color: "white",fontSize: "15px"}}>Follow US</h4>
              </div>
-             {/* <div className={style.search + ' w-50'}>
-             <MDBCol md="12" className={style.searchBar}>
-                  <input className="form-control" type="text" placeholder="ابحث" aria-label="ابحث" />
-                  <button onClick={()=>{
-                  toast.success("runn",{theme: "dark",})
-                  }} type='submit'>بحث</button>
-             </MDBCol>
-             </div> */}
              <div className={style.lnks + ' h-25'}>
                    <img src={gif} width="50%"/>
              </div>
