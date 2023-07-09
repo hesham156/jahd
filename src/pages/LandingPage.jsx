@@ -31,10 +31,13 @@ const LandingPage = () => {
     <div>
      
 
-
+    
       <Nave/>
       <Carousel  arrows={false} responsive={responsive} infinite={true} autoPlay={true}> 
      <div>
+     <section>
+         Welcome in my site
+     </section>
      <div className='overlay2'></div>
      <video style={{height: "100vh",objectFit: "fill"}}   loop={true}  autoPlay={true} width="100%">
       <source src={video1} />

@@ -79,6 +79,22 @@
       "rating":{},
       "comments":[],
       "status":"active"
+    },
+    {
+      "id":4,
+      "name": "React ",
+      "type":"back",
+      "img": "https://i.ytimg.com/vi/X1ulCwyhCVM/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDkC-vNrtKaa-y2FSGQ9oGsv4XKdg",
+      "instructor_id":1,
+      "date":"2021-01-01",
+      "time":"12:00",
+      "location":"Bangalore",
+      "description":"This is a description of the course",
+      "c_id":"PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe",
+      "students":["user"],
+      "rating":{},
+      "comments":[],
+      "status":"active"
     }
   ],
   "instructors":[
@@ -109,6 +125,9 @@
     }
   ],
   "books":[
+    
+  ],
+  "articls":[
     
   ]
  

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import style from './sidenave.module.css'
 const SideNave = ({active}) => {
-    const data = [{id:1,text:"home",url:"/#"},{id:2,text:"road maps",url:'/road/'},{id:3,text:"courses",url:'/courses/'},{id:3,text:"books",url:'/books/'},{id:4,text:"login",url:'/login/'}]
+    const data = [{id:1,text:"home",url:"/#"},{id:2,text:"road maps",url:'/road/'},{id:3,text:"courses",url:'/courses/'},{id:3,text:"books",url:'/books/'},{id:3,text:"articls",url:'/articls/'},{id:4,text:"login",url:'/login/'}]
     const sidenave = {
     position: "fixed",
     width: active?"100%":"0%",

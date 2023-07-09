@@ -231,7 +231,9 @@ right: -100px;
     right: 75px;
     top: 90px;
 }
-
+a:hover{
+    color: #4CAF50 !important;
+}
 
 @media(max-width:990px) {
     .d-flex.justify-content-center.flex-row-reverse.w-100 {

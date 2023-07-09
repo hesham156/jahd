@@ -19,6 +19,7 @@ const Home = () => {
     <Route path="/road/" element={<GridSection src={'http://localhost:3004/roadsMap'}/>}/>
     <Route path="/course/" element={<GridSection src={'http://localhost:3004/courses'}/>}/>
     <Route path="/books/" element={<GridSection src={'http://localhost:3004/books'}/>}/>
+    <Route path="/articls/" element={<GridSection src={'http://localhost:3004/articls'}/>}/>
 
     <Route path="/" element={<LandingPage/>}/>
     </Routes>
