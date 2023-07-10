@@ -3,6 +3,7 @@ import {  Route, Routes } from 'react-router-dom'
 import {RoadMaps,Course,LandingPage} from './AllPage'
 import 'react-multi-carousel/lib/styles.css';
 import GridSection from '../component/sections/GridSection';
+import Admin from './admin/Admin';
 
 const Home = () => {
   
@@ -21,7 +22,7 @@ const Home = () => {
     <Route path="/books/" element={<GridSection src={'http://localhost:3004/books'}/>}/>
     <Route path="/articls/" element={<GridSection src={'http://localhost:3004/articls'}/>}/>
 
-    <Route path="/" element={<LandingPage/>}/>
+    <Route path="/*" element={<LandingPage/>}/>
     </Routes>
       </>  
       

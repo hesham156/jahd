@@ -5,12 +5,17 @@ const useGet = (url) => {
     const [data, setData] = useState([])
     const [error, setError] = useState(false)
     const [empty,setEmpty] = useState(false)
-    const getData = async ()=>{
-     var d=  await axios.get(url)
-       setData(d.data)
-    }
+    // const getData = async ()=>{
+    //  const d=  await axios.get(url)
+    //    setData(d.data)
+    //    console.log(d);
+    // }
     useEffect(()=>{
-      getData()
+      axios.get(url)
+      .then((data)=>{
+        setData(data.data)
+      })
+      // getData()
     },[])
   
   return {data,error,empty}

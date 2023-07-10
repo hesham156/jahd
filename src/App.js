@@ -11,7 +11,7 @@ function App() {
     <Route exact path="/*" element={<Home/>}/>
     <Route path="/login" element={<Login/>}/>
     <Route path="/register" element={<Register/>}/>
-    <Route path="/admin" element={<Admin/>}/>
+    <Route path="/admin/*" element={<Admin/>}/>
     {/* <Route path="/course/:courseid" element={<Course/>}/> */}
     <Route path="/not" element={<Error/>} />
     <Route path="*" element={<Error errorCode={404} errorMsg={"This Page not foumd"}/>}/>

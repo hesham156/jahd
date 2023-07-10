@@ -1,8 +1,9 @@
 :root{
     --primary-color:#0d9a7e;
 }
-*{
+h3,h2,h1{
     transition: all 0.3s ease-in-out;
+    color: #fff;
 }
 body{
     background: black;
