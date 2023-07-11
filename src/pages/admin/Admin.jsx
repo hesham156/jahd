@@ -1,8 +1,9 @@
 import React from 'react'
-import Nave from '../../component/nave/Nave'
 import BlockSideNave from '../../component/nave/BlockSideNave'
 import { Route, Routes } from 'react-router-dom'
 import Setting from './Setting'
+import Dashboard from './Dashboard'
+import Categores from './Categores'
 
 const Admin = () => {
   return (
@@ -12,6 +13,8 @@ const Admin = () => {
          </div>
          <div className='w-75'>
          <Routes>
+            <Route path='/dashboard' element={<Dashboard/>}/>
+            <Route path='/categores' element={<Categores/>}/>
             <Route path='/' element={<Setting/>}/>
          </Routes>
          </div>
