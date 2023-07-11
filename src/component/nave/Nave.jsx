@@ -3,10 +3,10 @@ import style from './nave.module.css'
 import data from '../../data/data.json'
 import gif from '../../asset/video/gif.gif'
 import Hamburger from 'hamburger-react'
-import logo from '../../asset/img/logo.png'
 import SideNave from './SideNave'
 import Social from './Social'
 import BtnNave from './BtnNave'
+import Logo from './Logo'
 const Nave = () => {
     document.title=data.site.siteName;
    const [active,setActive]= useState(false)
@@ -20,9 +20,7 @@ const Nave = () => {
     <div className={style.nave}>
          <div className=' h-100 w-100'>
             <div className='d-flex flex-column w-100 h-100'>
-             <div className={style.logo + ' logo h-25'}>
-                {data.site.siteLogo?<img className={style.logoImg } src={logo} alt={data.site.siteName}/>:<h1 className={style.logoName}>{data.site.siteName}</h1>}
-             </div>
+             <Logo/>
              <div className={style.menu + ' logo h-25'}>
                <div className='menu'>
                     <Hamburger  onToggle={(e)=>{setActive(e)}} easing="ease-in-out" color='#fff' />

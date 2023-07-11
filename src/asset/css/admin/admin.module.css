@@ -1,0 +1,22 @@
+.admin{
+    background-color: white;
+    min-height: 100vh;
+}
+.admin>div:first-child{
+    border-right: 1px solid rgb(0 0 0 / 24%);
+    width: 15%;
+    min-width: 100px;
+    max-width: 200px;
+}
+.admin>div:first-child ul{
+    padding: 0;
+    margin: 0;
+}
+.admin>div:first-child ul li{
+    padding: 10px;
+    text-align: center;
+}
+.admin>div:last-child{
+    width: 85%;
+    
+}
