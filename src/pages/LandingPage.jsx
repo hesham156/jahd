@@ -25,14 +25,14 @@ const LandingPage = () => {
           items: 1
         }
       };
-    
+
       
   return (
     <div>
      
 
     
-      <Nave/>
+      <Nave />
       <Carousel  arrows={false} responsive={responsive} infinite={true} autoPlay={true}> 
      <div>
      <section>

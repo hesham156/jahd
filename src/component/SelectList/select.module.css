@@ -1,0 +1,18 @@
+.listitem{
+    transition: all 0.3s;
+}
+.active{
+        background: #f2ab20;
+        border-radius: 15px;
+        font-size: 15px;
+        font-weight: 900;
+}
+.listitem > a:hover{
+  color: #f2ab20 !important;
+}
+.active > a{
+    color: white !important;
+}
+.active> a:hover{
+    color: #fff !important;
+  }

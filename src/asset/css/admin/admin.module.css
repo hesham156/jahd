@@ -5,7 +5,7 @@
 .admin>div:first-child{
     border-right: 1px solid rgb(0 0 0 / 24%);
     width: 15%;
-    min-width: 100px;
+    min-width: 150px;
     max-width: 200px;
 }
 .admin>div:first-child ul{

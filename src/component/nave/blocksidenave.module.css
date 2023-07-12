@@ -1,0 +1,13 @@
+.lnks >div:last-child{
+    display: none;
+    margin: auto;
+}
+@media(max-width:900px) {
+    .lnks >div:last-child{
+        display: block;
+        z-index: 111111;
+    }
+    .lnks >ul:first-child{
+        display: none;
+    }
+}
