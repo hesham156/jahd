@@ -11,12 +11,12 @@ const Nave = () => {
     document.title=data.site.siteName;
    const [active,setActive]= useState(false)
    const [sActive,setSActive]= useState(false)
-   const data = [{id:1,text:"home",url:"/#"},{id:2,text:"road maps",url:'/road/'},{id:3,text:"courses",url:'/courses/'},{id:3,text:"books",url:'/books/'},{id:3,text:"articls",url:'/articls/'},{id:4,text:"login",url:'/login/'}]
+   const list = [{id:1,text:"home",url:"/#"},{id:2,text:"road maps",url:'/road/'},{id:3,text:"courses",url:'/courses/'},{id:3,text:"books",url:'/books/'},{id:3,text:"articls",url:'/articls/'},{id:4,text:"login",url:'/login/'}]
 
    return (
     <>
     <BtnNave/>
-    <SideNave active={active} list={data}/>
+    <SideNave active={active} list={list}/>
     <Social active={sActive} />
     <div className={style.nave}>
          <div className=' h-100 w-100'>

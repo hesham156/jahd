@@ -1,0 +1,27 @@
+.searchnave{
+    padding: 10px;
+}
+.user>div{
+    padding: 10px 20px;
+    background: #f2ab20;
+    border-radius: 20px;
+}
+.userName p{
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+.search >form{
+    background: #ffffff;
+    border-radius: 25px;
+}
+.search>form>input{
+    width: 90%;
+    padding: 10px 20px;
+    border: 0;
+    background: transparent;
+    color: white;
+    outline: none;
+}

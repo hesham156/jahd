@@ -8,6 +8,9 @@
     min-width: 150px;
     max-width: 200px;
 }
+.admin>div:last-child{
+    background: #f2f7ff;
+}
 .admin>div:first-child ul{
     padding: 0;
     margin: 0;
@@ -17,6 +20,6 @@
     text-align: center;
 }
 .admin>div:last-child{
-    width: 85%;
+    width: 90%;
     
 }
