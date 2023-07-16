@@ -4,6 +4,7 @@ import {RoadMaps,Course,LandingPage} from './AllPage'
 import 'react-multi-carousel/lib/styles.css';
 import GridSection from '../component/sections/GridSection';
 import Admin from './admin/Admin';
+import SearchNave from '../component/nave/SearchNave';
 
 const Home = () => {
   
@@ -13,7 +14,8 @@ const Home = () => {
  
   return (
       <>
-    
+          <SearchNave/>
+
     <Routes>
     <Route path="/course/:courseid" element={<Course/>}/>
     <Route path="/road/:roadtype" element={<RoadMaps/>}/>

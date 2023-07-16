@@ -3,7 +3,7 @@ import Logo from './Logo'
 import Select from '../SelectList/Select'
 import SideNave from './SideNave'
 import Hamburger from 'hamburger-react'
-import style from './blocksidenave.module.css'
+import style from './cssModule/blocksidenave.module.css'
 const BlockSideNave = () => {
   const list = [{url:'/admin/',text:'Setting'},{url:'/admin/dashboard/',text:'dashboard'},{url:'/admin/categores/',text:'categores'}]
   const [active,setActive] = useState(false)

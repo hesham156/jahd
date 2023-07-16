@@ -3,6 +3,7 @@ import Nave from '../component/nave/Nave';
 import Carousel from 'react-multi-carousel';
 import video1 from '../asset/video/1.mp4'
 import GridSection from '../component/sections/GridSection';
+import SearchNave from '../component/nave/SearchNave';
 
 
 

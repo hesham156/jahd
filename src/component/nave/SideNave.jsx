@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import style from './sidenave.module.css'
+import style from './cssModule/sidenave.module.css'
 import Select from '../SelectList/Select'
 const SideNave = ({active,list}) => {
     const sidenave = {

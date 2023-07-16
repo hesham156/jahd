@@ -2,7 +2,7 @@ import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
-import style from './btnnave.module.css'
+import style from './cssModule/btnnave.module.css'
 const BtnNave = () => {
     const [active,setActive] = useState(false)
     const [sOpen,setsOpen] = useState(false)

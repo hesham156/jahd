@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import style from './nave.module.css'
+import style from './cssModule/nave.module.css'
 import data from '../../data/data.json'
 import gif from '../../asset/video/gif.gif'
 import Hamburger from 'hamburger-react'
