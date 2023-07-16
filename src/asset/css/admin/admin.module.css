@@ -19,6 +19,9 @@
     padding: 10px;
     text-align: center;
 }
+.admin>div:first-child ul li a{
+    color: black;
+}
 .admin>div:last-child{
     width: 90%;
     

@@ -1,12 +1,17 @@
 import React from 'react'
 import style from './searchnave.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 const SearchNave = () => {
   return (
     <div className={style.searchnave +' d-flex justify-content-center align-items-center flex-row'}>
         <div className={style.search+' w-75 d-flex justify-content-center align-items-center'}>
             <form className='w-100'>
                 <input type='text' placeholder='search' />
-                <button>Search</button>
+                <button>
+                <FontAwesomeIcon icon={faSearch}/>
+                  <p>Search</p>
+                  </button>
             </form>
         </div>
         <div className={style.user+' w-25 d-flex justify-content-end align-items-center'}>

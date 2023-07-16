@@ -13,9 +13,18 @@
     font-weight: 900;
     text-transform: capitalize;
 }
+
 .search >form{
     background: #ffffff;
     border-radius: 25px;
+    overflow: hidden;
+}
+.search>form>button{
+    width: 10%;
+    right: 0px;
+    position: relative;
+    background: #f2ab20;
+
 }
 .search>form>input{
     width: 90%;
@@ -24,4 +33,30 @@
     background: transparent;
     color: white;
     outline: none;
+    color: black;
+}
+.search>form>button>svg{
+    display: none;
+}
+.search>form>button>p{
+    margin: 0;
+}
+@media(max-width:991px) {
+    .userName{
+        display: none;
+    }
+    .search>form>button>p{
+        display: none;
+    }
+    .search>form>button>svg{
+        display: block;
+        margin: auto;
+    }
+    .search>form>input{
+        width: 85%;
+    }
+    .search>form>button{
+        width: 15%;
+        height: 50px;
+    }
 }
