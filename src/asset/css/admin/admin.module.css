@@ -16,11 +16,12 @@
     margin: 0;
 }
 .admin>div:first-child ul li{
-    padding: 10px;
     text-align: center;
 }
 .admin>div:first-child ul li a{
     color: black;
+    padding: 10px;
+    display: block;
 }
 .admin>div:last-child{
     width: 90%;
